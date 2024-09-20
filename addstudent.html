@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Students</title>
+  <link rel="stylesheet" href="addstudent.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Add Students</h2>
+    <form id="add-student-form">
+      <div class="form-group">
+        <label>First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <div class="form-group">
+        <label>Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label>CNIC:</label>
+        <input type="text" id="cnic" name="cnic" required>
+      </div>
+      <div class="form-group">
+        <label>User Type:</label>
+        <select id="userType" name="userType" required>
+          <option value="student">Student</option>
+        </select>
+      </div>
+      <button id="add-student-btn">Add Student</button>
+    </form>
+    <div id="error-message"></div>
+  </div>
+  <script  src="addstudent.js"></script>
+</body>
+</html>
