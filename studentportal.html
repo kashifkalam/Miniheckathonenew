@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Portal</title>
+  <link rel="stylesheet" href="studentportal.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Portal</h2>
+    <nav>
+      <ul>
+        <li><a href="#edit-profile">Edit Profile</a></li>
+        <li><a href="#result">Result</a></li>
+      </ul>
+    </nav>
+    <div class="content">
+      <div id="edit-profile">
+        <h3>Edit Profile</h3>
+        <form id="edit-profile-form">
+          <div class="form-group">
+            <label>CNIC:</label>
+            <input type="text" id="cnic" name="cnic" required>
+          </div>
+          <div class="form-group">
+            <label>First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+          <button id="save-btn">Save Changes</button>
+        </form>
+      </div>
+      <div id="result">
+        <h3>Result</h3>
+        <form id="result-form">
+          <div class="form-group">
+            <label>CNIC:</label>
+            <input type="text" id="cnic-result" name="cnic" required>
+          </div>
+          <button id="search-btn">Search Result</button>
+          <div id="result-display"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="studentportal.js"></script>
+</body>
+</html>

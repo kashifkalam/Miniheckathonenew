@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Student Marks</title>
+  <link rel="stylesheet" href="uploadsm.css">
+  <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-database-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2>Upload Student Marks</h2>
+    <form id="upload-marks-form">
+      <div class="form-group">
+        <label>Course:</label>
+        <input type="text" id="course" name="course" required>
+      </div>
+      <div class="form-group">
+        <label>Student ID:</label>
+        <input type="text" id="studentId" name="studentId" required>
+      </div>
+      <div class="form-group">
+        <label>Marks:</label>
+        <input type="number" id="marks" name="marks" required>
+      </div>
+      <div class="form-group">
+        <label>Total Marks:</label>
+        <input type="number" id="totalMarks" name="totalMarks" required>
+      </div>
+      <div class="form-group">
+        <label>Grade:</label>
+        <select id="grade" name="grade" required>
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+          <option value="D">D</option>
+          <option value="F">F</option>
+        </select>
+      </div>
+      <button id="upload-marks-btn">Upload Marks</button>
+    </form>
+    <div id="error-message"></div>
+  </div>
+  <script src="uploadsm.js"></script>
+</body>
+</html>
